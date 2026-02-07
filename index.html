@@ -94,13 +94,206 @@ h2 {
   color: #aaa;
 }
 
+    .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.hero-text {
+  max-width: 520px;
+}
 
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 260px;
+  opacity: 0.9;
+}
+
+.logo {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at top, #ff3b3b, #b30000);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 40px rgba(255, 59, 59, 0.4);
+}
+
+.logo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ff3b3b, #7a0000);
+  position: relative;
+  animation: aiPulse 4s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(255, 59, 59, 0.35);
+}
+
+@keyframes aiPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(255, 59, 59, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(255, 59, 59, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(255, 59, 59, 0.3);
+  }
+}    
+
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+   
+    /* === AI BLINKING EYES === */
+.logo-eyes {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  display: flex;
+  gap: 28px;
+  transform: translateX(-50%);
+}
+
+.logo-eye {
+  width: 18px;
+  height: 18px;
+  background: #0b0b0b;
+  border-radius: 50%;
+  animation: blink 4.5s infinite;
+}
+
+@keyframes blink {
+  0%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  width: 100px;
+  height: 50px;
+  background: #fff;
+  border-radius: 0 0 50px 50px;
+  transform: translateX(-50%);
+}
+
+.logo-eyes {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  display: flex;
+  gap: 30px;
+  transform: translateX(-50%);
+}
+
+.logo-eye {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.logo-mustache {
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  width: 90px;
+  height: 20px;
+  border-top: 4px solid #000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* === EINSTEIN MUSTACHE === */
+.logo-mustache {
+  position: absolute;
+  top: 115px;
+  left: 50%;
+  width: 70px;
+  height: 18px;
+  background: #0b0b0b;
+  border-radius: 50px;
+  transform: translateX(-50%);
+  box-shadow:
+    -35px 0 0 #0b0b0b,
+     35px 0 0 #0b0b0b;
+}
+    
+/* === NAVBAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  padding: 0 32px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 59, 59, 0.15);
+}
+
+.nav-logo {
+  font-weight: 700;
+  color: #ff3b3b;
+  letter-spacing: 1px;
+}
+
+.nav-right a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.nav-right a:hover {
+  color: #ff3b3b;
+}
+
+    
   </style>
 </head>
 <body>
 
+  <nav class="navbar">
+  <div class="nav-left">
+    <div class="nav-logo">🦞 CLAWLABS</div>
+  </div>
+
+  <div class="nav-right">
+    <a href="#">Agents</a>
+    <a href="#">Developers</a>
+    <a href="#">Docs</a>
+  </div>
+</nav>
+
   <div class="container">
+
+  <div class="hero">
+  <div class="hero-text">
+
   <h1 class="glow fade-in delay-1">CLAWLABS</h1>
 
 <div class="tagline fade-in delay-2">
@@ -125,17 +318,33 @@ h2 {
   <a href="#">Launch Agents</a>
   <a href="#">Read Docs</a>
 </div>
+</div> 
 
+<div class="hero-visual fade-in delay-3">
+  <div class="logo">
+  <div class="logo-eyes">
+    <div class="logo-eye"></div>
+    <div class="logo-eye"></div>
+  </div>
+  <div class="logo-mustache"></div>
+
+</div>
+</div>
+
+      
+</div>
 <div class="status fade-in delay-5">
   <span class="dot"></span>
   Agent status: <strong>Online</strong>
 </div>
 
+<footer>
+  © 2026 CLAWLABS — Powered by $CLABS
+</footer>
 
-    <footer>
-      © 2026 CLAWLABS — Powered by $CLABS
-    </footer>
-  </div>
+</div> 
+
+  
 
 </body>
 </html>
