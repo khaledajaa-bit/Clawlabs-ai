@@ -25,6 +25,22 @@
     .glow {
   text-shadow: 0 0 12px rgba(255, 59, 59, 0.6);
 }
+h2 {
+  margin-top: 60px;
+  font-size: 28px;
+  color: #ff3b3b;
+}
+
+.why {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.why li {
+  margin-bottom: 12px;
+  color: #bbb;
+  font-size: 16px;
+}
 
     p {
       font-size: 18px;
@@ -53,20 +69,42 @@
       font-size: 14px;
       color: #666;
     }
+    .fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   </style>
 </head>
 <body>
 
   <div class="container">
-   <h1 class="glow">CLAWLABS</h1>
+   <h1 class="glow fade-in">CLAWLABS</h1>
 
-    <div class="tagline">Observe. Learn. Act.</div>
+    <div class="tagline fade-in">Observe. Learn. Act.</div>
 
-    <p>
+    <p class="fade-in">
       CLAWLABS is an autonomous AI agent laboratory built for the crypto ecosystem.
       We design intelligent agents that observe narratives, analyze on-chain data,
       and act without human micromanagement.
     </p>
+    
+    <h2 class="fade-in">Why CLAWLABS?</h2>
+
+<ul class="why fade-in">
+  <li>Autonomous-first AI agents</li>
+  <li>Crypto-native intelligence</li>
+  <li>Research-driven deployment</li>
+</ul>
+
 
     <div class="buttons">
       <a href="#">Launch Agents</a>
