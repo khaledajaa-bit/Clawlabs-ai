@@ -151,10 +151,10 @@ h2 {
 }    
 
 @keyframes blink {
-  0%, 90%, 100% {
+  0%, 95%, 100% {
     transform: scaleY(1);
   }
-  95% {
+  97% {
     transform: scaleY(0.1);
   }
 }
@@ -228,17 +228,16 @@ h2 {
 /* === EINSTEIN MUSTACHE === */
 .logo-mustache {
   position: absolute;
-  top: 115px;
+  bottom: 70px;
   left: 50%;
-  width: 70px;
-  height: 18px;
+  width: 90px;
+  height: 14px;
   background: #0b0b0b;
-  border-radius: 50px;
+  border-radius: 20px;
   transform: translateX(-50%);
-  box-shadow:
-    -35px 0 0 #0b0b0b,
-     35px 0 0 #0b0b0b;
+  box-shadow: -30px 0 0 #0b0b0b, 30px 0 0 #0b0b0b;
 }
+
     
 /* === NAVBAR === */
 .navbar {
@@ -272,6 +271,11 @@ h2 {
   color: #ff3b3b;
 }
 
+/* === LOGO HOVER GLOW === */
+.logo:hover {
+  box-shadow: 0 0 80px rgba(255, 59, 59, 0.75);
+  transition: box-shadow 0.3s ease;
+}
     
   </style>
 </head>
