@@ -276,6 +276,23 @@ h2 {
   box-shadow: 0 0 80px rgba(255, 59, 59, 0.75);
   transition: box-shadow 0.3s ease;
 }
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}
+
+.hero-mascot {
+  width: 260px;
+  filter: drop-shadow(0 0 40px rgba(255, 59, 59, 0.35));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-mascot:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 60px rgba(255, 59, 59, 0.6));
+}
     
   </style>
 </head>
@@ -283,8 +300,10 @@ h2 {
 
   <nav class="navbar">
   <div class="nav-left">
-    <div class="nav-logo">🦞 CLAWLABS</div>
-  </div>
+  <img src="icon.svg" alt="CLAWLABS" class="nav-icon">
+  <span>CLAWLABS</span>
+</div>
+
 
   <div class="nav-right">
     <a href="#">Agents</a>
@@ -325,14 +344,14 @@ h2 {
 </div> 
 
 <div class="hero-visual fade-in delay-3">
-  <div class="logo">
-  <div class="logo-eyes">
-    <div class="logo-eye"></div>
-    <div class="logo-eye"></div>
-  </div>
-  <div class="logo-mustache"></div>
-
+  <div class="hero-visual fade-in delay-3">
+  <img 
+    src="mascot.png"
+    alt="CLAWLABS AI Lobster"
+    class="hero-mascot"
+  >
 </div>
+
 </div>
 
       
