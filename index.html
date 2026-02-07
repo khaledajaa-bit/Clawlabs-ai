@@ -5,6 +5,7 @@
   <title>CLAWLABS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>  
     body {
@@ -293,6 +294,19 @@ h2 {
   transform: scale(1.05);
   filter: drop-shadow(0 0 60px rgba(255, 59, 59, 0.6));
 }
+
+.hero-mascot {
+  width: 320px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 40px rgba(255, 59, 59, 0.35));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
     
   </style>
 </head>
@@ -344,13 +358,9 @@ h2 {
 </div> 
 
 <div class="hero-visual fade-in delay-3">
-  <div class="hero-visual fade-in delay-3">
-  <img 
-    src="mascot.png"
-    alt="CLAWLABS AI Lobster"
-    class="hero-mascot"
-  >
+  <img src="mascot.png" alt="CLAWLABS AI Lobster" class="hero-mascot">
 </div>
+
 
 </div>
 
