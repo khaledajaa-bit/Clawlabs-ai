@@ -95,7 +95,7 @@ h2 {
   color: #aaa;
 }
 
-    .hero {
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,134 +111,6 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-
-.hero-logo {
-  width: 260px;
-  opacity: 0.9;
-}
-
-.logo {
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle at top, #ff3b3b, #b30000);
-  border-radius: 50%;
-  position: relative;
-  box-shadow: 0 0 40px rgba(255, 59, 59, 0.4);
-}
-
-.logo {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, #ff3b3b, #7a0000);
-  position: relative;
-  animation: aiPulse 4s ease-in-out infinite;
-  box-shadow: 0 0 40px rgba(255, 59, 59, 0.35);
-}
-
-@keyframes aiPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 30px rgba(255, 59, 59, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 60px rgba(255, 59, 59, 0.6);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 30px rgba(255, 59, 59, 0.3);
-  }
-}    
-
-@keyframes blink {
-  0%, 95%, 100% {
-    transform: scaleY(1);
-  }
-  97% {
-    transform: scaleY(0.1);
-  }
-}
-   
-    /* === AI BLINKING EYES === */
-.logo-eyes {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  display: flex;
-  gap: 28px;
-  transform: translateX(-50%);
-}
-
-.logo-eye {
-  width: 18px;
-  height: 18px;
-  background: #0b0b0b;
-  border-radius: 50%;
-  animation: blink 4.5s infinite;
-}
-
-@keyframes blink {
-  0%, 92%, 100% {
-    transform: scaleY(1);
-  }
-  95% {
-    transform: scaleY(0.1);
-  }
-}
-
-.logo::before {
-  content: "";
-  position: absolute;
-  top: 55px;
-  left: 50%;
-  width: 100px;
-  height: 50px;
-  background: #fff;
-  border-radius: 0 0 50px 50px;
-  transform: translateX(-50%);
-}
-
-.logo-eyes {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  display: flex;
-  gap: 30px;
-  transform: translateX(-50%);
-}
-
-.logo-eye {
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 50%;
-}
-
-.logo-mustache {
-  position: absolute;
-  top: 95px;
-  left: 50%;
-  width: 90px;
-  height: 20px;
-  border-top: 4px solid #000;
-  border-radius: 50%;
-  transform: translateX(-50%);
-}
-
-/* === EINSTEIN MUSTACHE === */
-.logo-mustache {
-  position: absolute;
-  bottom: 70px;
-  left: 50%;
-  width: 90px;
-  height: 14px;
-  background: #0b0b0b;
-  border-radius: 20px;
-  transform: translateX(-50%);
-  box-shadow: -30px 0 0 #0b0b0b, 30px 0 0 #0b0b0b;
-}
-
     
 /* === NAVBAR === */
 .navbar {
@@ -272,12 +144,15 @@ h2 {
   color: #ff3b3b;
 }
 
-/* === LOGO HOVER GLOW === */
-.logo:hover {
-  box-shadow: 0 0 80px rgba(255, 59, 59, 0.75);
-  transition: box-shadow 0.3s ease;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ff3b3b;
 }
-
+    
 .nav-icon {
   width: 22px;
   height: 22px;
@@ -285,20 +160,9 @@ h2 {
 }
 
 .hero-mascot {
-  width: 260px;
-  filter: drop-shadow(0 0 40px rgba(255, 59, 59, 0.35));
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.hero-mascot:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 60px rgba(255, 59, 59, 0.6));
-}
-
-.hero-mascot {
-  width: 320px;
+  width: 420px;
   max-width: 100%;
-  filter: drop-shadow(0 0 40px rgba(255, 59, 59, 0.35));
+  filter: drop-shadow(0 0 60px rgba(255, 59, 59, 0.45));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -307,16 +171,46 @@ h2 {
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0); }
 }
+
+.hero-mascot:hover {
+  filter: drop-shadow(0 0 90px rgba(255, 59, 59, 0.75));
+  transform: scale(1.03);
+}
+
+.nav-left:hover {
+  text-shadow: 0 0 10px rgba(255, 59, 59, 0.6);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-mascot {
+    margin-top: 40px;
+    width: 300px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+}
+
     
   </style>
 </head>
 <body>
 
   <nav class="navbar">
-  <div class="nav-left">
-  <img src="icon.svg" alt="CLAWLABS" class="nav-icon">
-  <span>CLAWLABS</span>
+
+ <div class="nav-left">
+  <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+    <img src="favicon.png" alt="CLAWLABS" class="nav-icon">
+    <span>CLAWLABS</span>
+  </a>
 </div>
+
 
 
   <div class="nav-right">
