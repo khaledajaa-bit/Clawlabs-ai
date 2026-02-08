@@ -7,64 +7,102 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <style>   
+  <style>  
+  
+  * {
+  box-sizing: border-box;
+}
+
+section {
+  margin-top: 140px;
+}
+
     body {
-      margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-    h1 {
-      font-size: 48px;
-      letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1040px;   /* sebelumnya 900 */
+  margin: auto;
+  padding: 100px 24px;
+}
+
+h1 {
+  font-size: 64px;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
     }
     .glow {
   text-shadow: 0 0 12px rgba(255, 59, 59, 0.6);
 }
+
 h2 {
-  margin-top: 60px;
-  font-size: 28px;
+  margin-top: 120px;
+  margin-bottom: 32px;
+  font-size: 32px;
   color: #ff3b3b;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cfcfcf;
+  margin-bottom: 20px;
 }
 
 .why {
-  margin-top: 20px;
-  padding-left: 20px;
+  margin-top: 16px;
+  padding-left: 18px;
 }
 
 .why li {
-  margin-bottom: 12px;
-  color: #bbb;
-  font-size: 16px;
+  margin-bottom: 14px;
+  color: #bcbcbc;
+  font-size: 15px;
 }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #cccccc;
-    }
     .tagline {
       color: #ff3b3b;
       margin-bottom: 30px;
       font-weight: bold;
     }
-    .buttons a {
-      display: inline-block;
-      margin-right: 15px;
-      padding: 12px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #fff;
-      border: 1px solid #ff3b3b;
-    }
-    .buttons a:hover {
-      background: #ff3b3b;
-    }
+    
+  .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.buttons a:hover {
+  background: #ff3b3b;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255, 59, 59, 0.35);
+}
+
     footer {
       margin-top: 100px;
       font-size: 14px;
@@ -90,7 +128,7 @@ h2 {
 .fade-in.delay-5 { animation-delay: 1s; }
 
 .status {
-  margin-top: 18px;
+  margin-top: 50px;
   font-size: 13px;
   color: #aaa;
   opacity: 0.85;
@@ -134,12 +172,20 @@ h2 {
   letter-spacing: 1px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 .nav-right a {
   margin-left: 24px;
   text-decoration: none;
   color: #ccc;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
+
 
 .nav-right a:hover {
   color: #ff3b3b;
@@ -148,17 +194,18 @@ h2 {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  gap: 6px;              
+  font-weight: 600;
+  letter-spacing: 0.6px; 
   color: #ff3b3b;
 }
     
 .nav-icon {
-  width: 36px;
-  height: 36px;
-  margin-right: 8px;
+  width: 120px;
+  height: 140px;
+  object-fit: contain;
 }
+
 
 .hero-mascot {
   width: 420px;
@@ -196,9 +243,373 @@ h2 {
   .nav-right {
     display: none;
   }
+}   
+
+@media (max-width: 768px) {
+  .container {
+    padding: 72px 20px;
+  }
+
+  section {
+    margin-top: 100px;
+  }
 }
 
-    
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .agents {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal {
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 10px;
+  }
+
+  .terminal-body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-title {
+    font-size: 20px;
+  }
+
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+}
+
+.nav-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+
+.nav-left:hover .nav-icon {
+  filter: drop-shadow(0 0 10px rgba(255, 59, 59, 0.8));
+}
+
+.how-it-works {
+  margin-top: 120px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.step {
+  padding: 24px;
+  border: 1px solid rgba(255, 59, 59, 0.15);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.25s ease;
+}
+
+.step h3 {
+  color: #ff3b3b;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 15px;
+  color: #bbb;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255, 59, 59, 0.15);
+}
+
+@media (max-width: 768px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agents-preview {
+  margin-top: 120px;
+}
+
+.agents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.agent-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.agent-card h3 {
+  margin-bottom: 8px;
+}
+
+.agent-card p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.live {
+  color: #4cff7a;
+  font-size: 12px;
+}
+
+.training {
+  color: #ffb347;
+  font-size: 12px;
+}
+
+.terminal-section {
+  margin-top: 120px;
+}
+
+.terminal {
+  margin-top: 40px;
+  background: #050505;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 59, 59, 0.2);
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 59, 59, 0.15);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #0b0b0b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+  margin-left: 12px;
+  font-size: 12px;
+  color: #777;
+  font-family: monospace;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.cmd {
+  color: #ff3b3b;
+}
+
+.ok {
+  color: #4cff7a;
+  margin-right: 6px;
+}
+
+.cursor {
+  color: #ff3b3b;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .terminal-body {
+    font-size: 13px;
+  }
+}
+
+.roadmap-section {
+  margin-top: 120px;
+}
+
+.roadmap {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.roadmap-item {
+  padding: 28px;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 59, 59, 0.15);
+  transition: all 0.25s ease;
+}
+
+.roadmap-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(255, 59, 59, 0.2);
+}
+
+.phase {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ff3b3b;
+  text-transform: uppercase;
+}
+
+.roadmap-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.roadmap-item p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero {
+  padding-top: 40px;
+}
+
+.hero-text {
+  max-width: 560px;
+}
+
+.btn.primary {
+  background: #ff3b3b;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(255, 59, 59, 0.35);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(255, 59, 59, 0.5);
+}
+
+.btn.primary:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(255, 59, 59, 0.3);
+}
+
+.btn.secondary {
+  border: 1px solid rgba(255, 59, 59, 0.6);
+  color: #ff3b3b;
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 59, 59, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn.secondary:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.4);
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+.nav-x {
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-x:hover {
+  color: #ff3b3b;
+  transform: translateY(-1px);
+}
+
+.nav-x {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.nav-x svg {
+  transform: translateY(1px);
+}
+
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -207,18 +618,27 @@ h2 {
 
  <div class="nav-left">
   <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-    <img src="favicon.png" alt="CLAWLABS" class="nav-icon">
-    <span>CLAWLABS</span>
+    <img src="nav-logo.png" class="nav-icon">
+    <span class="nav-title">CLAWLABS</span>
   </a>
 </div>
 
 
 
   <div class="nav-right">
-    <a href="#">Agents</a>
-    <a href="#">Developers</a>
-    <a href="#">Docs</a>
-  </div>
+  <a href="#">Agents</a>
+  <a href="#">Developers</a>
+  <a href="docs.html">Docs</a>
+  <a href="https://x.com/ClawlabsAi" 
+     target="_blank" 
+     class="nav-x"
+     aria-label="CLAWLABS on X">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.83L0 1.153h7.594l5.243 6.932zM17.61 20.644h2.039L6.486 3.24H4.298z"/>
+    </svg>
+  </a>
+</div>
+
 </nav>
 
   <div class="container">
@@ -247,9 +667,14 @@ h2 {
 </ul>
 
 <div class="buttons fade-in delay-5">
-  <a href="#">Launch Agents</a>
-  <a href="#">Read Docs</a>
+  <a href="#" class="btn primary">
+    Launch Agents <span class="arrow">→</span>
+  </a>
+  <a href="docs.html" class="btn secondary">
+  Read Docs
+</a>
 </div>
+
  
 <div class="status fade-in delay-5">
 Agent status: <strong>Online</strong>
@@ -262,6 +687,102 @@ Agent status: <strong>Online</strong>
 </div>
 
 </div>
+
+<section class="how-it-works fade-in delay-2">
+  <h2>How CLAWLABS Agents Work</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Observe</h3>
+      <p>Agents monitor narratives, on-chain activity, and emerging signals in real time.</p>
+    </div>
+
+    <div class="step">
+      <h3>Learn</h3>
+      <p>Signals are processed and refined through adaptive learning models.</p>
+    </div>
+
+    <div class="step">
+      <h3>Act</h3>
+      <p>Agents execute actions autonomously without human micromanagement.</p>
+    </div>
+  </div>
+</section>
+
+<section class="agents-preview fade-in delay-2">
+  <h2>Active Agents</h2>
+
+  <div class="agents">
+    <div class="agent-card">
+      <h3>Narrative Watcher</h3>
+      <span class="live">● Live</span>
+      <p>Tracks emerging crypto narratives across social and on-chain data.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>On-Chain Sentinel</h3>
+      <span class="training">● Training</span>
+      <p>Detects abnormal wallet movements and liquidity shifts.</p>
+    </div>
+
+    <div class="agent-card">
+      <h3>Signal Synth</h3>
+      <span class="live">● Live</span>
+      <p>Combines multiple data streams into actionable intelligence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="terminal-section fade-in delay-2">
+  <h2>Agent Console</h2>
+
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">clawlabs://agent-console</span>
+    </div>
+
+    <div class="terminal-body">
+      <p><span class="cmd">></span> Initializing agent framework...</p>
+      <p><span class="ok">✔</span> Agent connected</p>
+      <p><span class="cmd">></span> Monitoring narratives</p>
+      <p><span class="ok">✔</span> Signal detected: liquidity spike</p>
+      <p><span class="cmd">></span> Executing autonomous action</p>
+      <p class="cursor">▋</p>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap-section fade-in delay-2">
+  <h2>Roadmap</h2>
+
+  <div class="roadmap">
+    <div class="roadmap-item">
+      <span class="phase">Q1 2026</span>
+      <h3>Agent Framework Launch</h3>
+      <p>Core autonomous agent architecture goes live with internal testing.</p>
+    </div>
+
+    <div class="roadmap-item">
+      <span class="phase">Q2 2026</span>
+      <h3>Public Agent Access</h3>
+      <p>Selected agents become accessible to developers and early users.</p>
+    </div>
+
+    <div class="roadmap-item">
+      <span class="phase">Q3 2026</span>
+      <h3>Community Agents</h3>
+      <p>Enable third-party agents built on the CLAWLABS ecosystem.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 <footer>
   © 2026 CLAWLABS — Powered by $CLABS
