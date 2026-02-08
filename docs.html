@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CLAWLABS Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #ff3b3b;
+      text-decoration: none;
+    }
+
+   /* === NAVBAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  padding: 0 32px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 59, 59, 0.15);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #ff3b3b;
+}
+
+.nav-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.nav-icon {
+  width: 120px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a:hover {
+  color: #ff3b3b;
+}
+
+/* X ICON */
+.nav-x {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-x:hover {
+  color: #ff3b3b;
+  transform: translateY(-1px);
+}
+
+.nav-x svg {
+  transform: translateY(1px);
+}
+
+    /* === CONTAINER === */
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 100px 24px;
+    }
+
+    h1 {
+      font-size: 48px;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 80px;
+      margin-bottom: 16px;
+      color: #ff3b3b;
+    }
+
+    p {
+      font-size: 16px;
+      color: #cfcfcf;
+      max-width: 720px;
+    }
+
+    .intro {
+      margin-bottom: 60px;
+    }
+
+    .box {
+      margin-top: 24px;
+      padding: 24px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 59, 59, 0.15);
+    }
+
+    .box p {
+      font-size: 15px;
+      color: #bbb;
+    }
+
+    footer {
+      margin-top: 120px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .container {
+        padding: 72px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+ <div class="nav-left">
+  <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+    <img src="nav-logo.png" class="nav-icon">
+    <span class="nav-title">CLAWLABS</span>
+  </a>
+</div>
+
+
+
+  <div class="nav-right">
+  <a href="/">Home</a>
+
+  <a href="https://x.com/ClawlabsAi"
+     target="_blank"
+     class="nav-x"
+     aria-label="CLAWLABS on X">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.83L0 1.153h7.594l5.243 6.932z"/>
+    </svg>
+  </a>
+</div>
+
+
+</nav>
+
+  <div class="container">
+
+    <div class="intro">
+      <h1>Documentation</h1>
+      <p>
+        Welcome to the CLAWLABS documentation. This space outlines the core
+        concepts, philosophy, and architecture behind our autonomous AI agents.
+      </p>
+    </div>
+
+    <h2>What is CLAWLABS?</h2>
+    <div class="box">
+      <p>
+        CLAWLABS is an autonomous AI agent laboratory designed for the crypto
+        ecosystem. Our agents observe narratives, analyze on-chain data, and
+        execute actions without continuous human intervention.
+      </p>
+    </div>
+
+    <h2>Agent Philosophy</h2>
+    <div class="box">
+      <p>
+        We believe AI agents should operate with autonomy-first principles.
+        Instead of manual triggers or constant oversight, CLAWLABS agents are
+        designed to adapt, learn, and act independently.
+      </p>
+    </div>
+
+    <h2>Architecture Overview</h2>
+    <div class="box">
+      <p>
+        Each agent follows a three-stage loop:
+        Observe → Learn → Act.
+        This modular design allows agents to evolve strategies based on real-time
+        signals and changing environments.
+      </p>
+    </div>
+
+    <h2>Status</h2>
+    <div class="box">
+      <p>
+        🚧 Public documentation is currently under active development.
+        Early access and detailed technical references will be released soon.
+      </p>
+    </div>
+
+    <footer>
+      © 2026 CLAWLABS · Follow us on
+      <a href="https://x.com/ClawlabsAi" target="_blank">X</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
